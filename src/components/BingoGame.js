@@ -676,12 +676,12 @@ class BingoGame extends Component {
                 {/* ----------- Autoplay Settings ---------- */}
                 <div className="row no-wrap align-center justify-start">
                   <div className="col shrink min-size-150 padding-horizontal-lg">
-                    <h6 className="no-margin blue-text">Autoplay Speed:</h6>
+                    <h6 className="no-margin blue-text">Autoplay Speed: {this.state.delay/1000} sec</h6>
                   </div>
                   <div className="col shrink text-center padding-vertical-lg padding-horizontal-lg">
                     <div className="row no-wrap align-center" data-disabled={this.state.displayBoardOnly}>
                       <div className="col shrink padding-right-lg white-text">Slower</div>
-                      <div className="col"><Slider min={3500} max={30000} step={500} value={this.state.delay} onChange={this.handleDelayChange} reverse={true} /></div>
+                      <div className="col"><Slider min={3000} max={30000} step={1000} value={this.state.delay} onChange={this.handleDelayChange} reverse={true} /></div>
                       <div className="col shrink padding-left-lg white-text">Faster</div>
                     </div>
                   </div>
